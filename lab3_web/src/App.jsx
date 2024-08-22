@@ -5,6 +5,12 @@ import { ResponseOptions } from './componets/responseOptions/responseOptions'
 
 import applejack from './assets/Applejack.jpg'
 
+//¿Cuál de estas imágenes te hace sentir más en paz?
+
+import a2 from "./assets/Campo de Manzanos.jpg"
+import b2 from "./assets/Biblioteca.jpg"
+import c2 from "./assets/Prado con animales.jpg"
+import d2 from "./assets/Cielo azul con arcoiris.jpg"
 
 function App() {
   return (
@@ -17,7 +23,9 @@ function App() {
       <ResponseCard type="text" text="Respuesta"></ResponseCard>
       <ResponseCard type="image" image={applejack}></ResponseCard> */}
 
-      <ResponseOptions></ResponseOptions>
+      <ResponseOptions type="text" quant={["1", "2", "3", "4"]}></ResponseOptions>
+
+      <ResponseOptions type="image" quant={[a2, b2, c2, d2]}></ResponseOptions>
     </>
   )
 }

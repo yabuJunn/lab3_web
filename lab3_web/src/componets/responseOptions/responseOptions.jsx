@@ -4,14 +4,23 @@ import { ResponseCard } from '../responseCard/responseCard'
 
 
 export function ResponseOptions(props) {
-    // const {type, quant} = props
+    // eslint-disable-next-line react/prop-types
+    const { type, quant } = props
 
-    return <>
-        <div id='respondeOptions'>
-            <ResponseCard type="text" text="Respuesta"></ResponseCard>
-            <ResponseCard type="text" text="Respuesta"></ResponseCard>
-            <ResponseCard type="text" text="Respuesta"></ResponseCard>
-            <ResponseCard type="text" text="Respuesta"></ResponseCard>
-        </div>
-    </>
+    if (type === "text") {
+        return <>
+            <div id='respondeOptions'>
+                {quant.map((response) => (<ResponseCard type="text" text={response} key={response}></ResponseCard>))}
+            </div>
+        </>
+    }
+
+    if (type === "image") {
+        return <>
+            <div id='respondeOptions'>
+                {quant.map((image) => (<ResponseCard type="image" image={image} key={image}></ResponseCard>))}
+            </div>
+        </>
+    }
+
 }
