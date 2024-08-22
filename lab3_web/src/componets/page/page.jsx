@@ -51,7 +51,7 @@ import pinkiePie from '../../assets/PinkiePie.jpg'
 export function Page() {
     const [page, setPage] = useState(0)
 
-    console.log(page)
+    const [respuestas, setRespuestas] = useState(["", "", "", "", "", "", "", "", "", ""])
 
     switch (page) {
         case 0:
@@ -71,7 +71,7 @@ export function Page() {
                 <div className='page' id='pregunta1'>
                     <h1>¿Cómo prefieres pasar un día libre?</h1>
                     <Progress actualPage="1" totalPages="10"></Progress>
-                    <ResponseOptions type="text" quant={["Organizando una fiesta para mis amigos", "Perfeccionando un nuevo proyecto creativo", "Leyendo un buen libro en un lugar tranquilo", "Explorando al aire libre, disfrutando de la naturaleza"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={1} actionRes={respuestas} quant={["Organizando una fiesta para mis amigos", "Perfeccionando un nuevo proyecto creativo", "Leyendo un buen libro en un lugar tranquilo", "Explorando al aire libre, disfrutando de la naturaleza"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(2) }}></Button>
                 </div>
             </>
