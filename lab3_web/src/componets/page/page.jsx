@@ -35,10 +35,17 @@ export function Page() {
             <Button text="Siguiente Pregunta"></Button>
         </div> */}
 
-        <div className='page' id='pregunta2'>
+        {/* <div className='page' id='pregunta2'>
             <h1>¿Cuál de estas imágenes te hace sentir más en paz?</h1>
             <Progress actualPage="2" totalPages="10"></Progress>
             <ResponseOptions type="image" quant={[a2, b2, c2, d2]}></ResponseOptions>
+            <Button text="Siguiente Pregunta"></Button>
+        </div> */}
+
+        <div className='page' id='pregunta3'>
+            <h1>¿Cómo prefieres pasar un día libre?</h1>
+            <Progress actualPage="3" totalPages="10"></Progress>
+            <ResponseOptions type="text" quant={["Con lógica y un plan bien pensado", "Con valentía y determinación", "Pidiendo ayuda a mis amigos, porque juntos somos más fuertes"]}></ResponseOptions>
             <Button text="Siguiente Pregunta"></Button>
         </div>
     </>
