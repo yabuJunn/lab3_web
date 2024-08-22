@@ -19,6 +19,8 @@
         font-size: 25px;
         color: white;
         font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding: 5px;
     }
 
     #responseCardTextContainer:hover {
@@ -28,6 +30,8 @@
     #responseCardImage {
         width: 237.5px;
         height: 237.5px;
+        border-radius: 7.66PX;
+
 
         overflow: hidden;
 
