@@ -1,0 +1,65 @@
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    #responseCardTextContainer {
+        width: 237.5px;
+        height: 237.5px;
+        border-radius: 7.66px;
+
+        background-color: #FBA5DD;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease;
+    }
+
+    #responseCardTextContainer p {
+        font-size: 25px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #responseCardTextContainer:hover {
+        background-color: #FFCEEE;
+    }
+
+    #responseCardImage {
+        width: 237.5px;
+        height: 237.5px;
+
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease;
+    }
+
+    /* #responseCardImage:hover div {
+        width: 100%;
+        height: 100%;
+
+        background-color: aqua;
+
+        z-index: 2;
+        position: relative;
+    } */
+
+    /* #responseCardImage:hover div {
+        width: 100%;
+        height: 100%;
+
+        z-index: 2;
+        position: relative;
+    } */
+
+    #responseCardImage img {
+        width: 100%;
+        height: 100%;
+
+        cursor: pointer;
+    }
+}
