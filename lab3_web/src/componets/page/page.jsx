@@ -63,7 +63,7 @@ export function Page() {
 
                     <p>¡Sumérgete en el colorido mundo de Equestria! ¿Alguna vez te has preguntado qué pony de las Mane Six se parece más a ti? Desde la leal Rainbow Dash hasta la generosa Rarity, cada uno tiene algo especial. Responde este divertido test y descubre cuál de estos encantadores personajes refleja tu personalidad. ¡Prepárate para un viaje mágico y personal!</p>
 
-                    <Button text="Comenzar test"></Button>
+                    <Button text="Comenzar test" action={() => { setPage(1) }}></Button>
                 </div>
             </>
         case 1:
@@ -72,7 +72,7 @@ export function Page() {
                     <h1>¿Cómo prefieres pasar un día libre?</h1>
                     <Progress actualPage="1" totalPages="10"></Progress>
                     <ResponseOptions type="text" quant={["Organizando una fiesta para mis amigos", "Perfeccionando un nuevo proyecto creativo", "Leyendo un buen libro en un lugar tranquilo", "Explorando al aire libre, disfrutando de la naturaleza"]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(2) }}></Button>
                 </div>
             </>
         case 2:
@@ -81,7 +81,7 @@ export function Page() {
                     <h1>¿Cuál de estas imágenes te hace sentir más en paz?</h1>
                     <Progress actualPage="2" totalPages="10"></Progress>
                     <ResponseOptions type="image" quant={[a2, b2, c2, d2]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(3) }}></Button>
                 </div>
             </>
         case 3:
@@ -90,7 +90,7 @@ export function Page() {
                     <h1>¿Cómo te enfrentas a un desafío difícil?</h1>
                     <Progress actualPage="3" totalPages="10"></Progress>
                     <ResponseOptions type="text" quant={["Con lógica y un plan bien pensado", "Con valentía y determinación", "Pidiendo ayuda a mis amigos, porque juntos somos más fuertes"]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(4) }}></Button>
                 </div>
             </>
         case 4:
@@ -99,7 +99,7 @@ export function Page() {
                     <h1>¿Cuál es tu forma favorita de expresarte?</h1>
                     <Progress actualPage="4" totalPages="10"></Progress>
                     <ResponseOptions type="text" quant={["A través de la moda y el diseño", "Organizando eventos divertidos y memorables", "Cuidando de otros, mostrando compasión y amabilidad"]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(5) }}></Button>
                 </div>
             </>
         case 5:
@@ -108,7 +108,7 @@ export function Page() {
                     <h1>Elige la imagen que mejor representa tu estilo ideal</h1>
                     <Progress actualPage="5" totalPages="10"></Progress>
                     <ResponseOptions type="image" quant={[a2, b2, c2, d2]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(6) }}></Button>
                 </div>
             </>
         case 6:
@@ -117,7 +117,7 @@ export function Page() {
                     <h1>¿Cómo manejas el estrés?</h1>
                     <Progress actualPage="6" totalPages="10"></Progress>
                     <ResponseOptions type="text" quant={["Me organizo y hago una lista de tareas para mantener el control", "Me distraigo con una actividad divertida o creativa", "Me tomo un tiempo para relajarme en la naturaleza"]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(7) }}></Button>
                 </div>
             </>
         case 7:
@@ -126,7 +126,7 @@ export function Page() {
                     <h1>¿Cuál de estas imágenes te inspira más?</h1>
                     <Progress actualPage="7" totalPages="10"></Progress>
                     <ResponseOptions type="image" quant={[a7, b7, c7, d7]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(8) }}></Button>
                 </div>
             </>
         case 8:
@@ -135,7 +135,7 @@ export function Page() {
                     <h1>Elige la imagen que te haga sonreír</h1>
                     <Progress actualPage="8" totalPages="10"></Progress>
                     <ResponseOptions type="image" quant={[a8, b8, c8, d8]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(9) }}></Button>
                 </div>
             </>
         case 9:
@@ -144,7 +144,7 @@ export function Page() {
                     <h1>¿Qué harías si un amigo necesita ayuda urgente?</h1>
                     <Progress actualPage="9" totalPages="10"></Progress>
                     <ResponseOptions type="text" quant={["Iría a ayudarlo, nada es más importante que estar ahí para un amigo", "Le ofrecería un hombro en el que apoyarse y palabras de consuelo", "Buscaría la forma más práctica y rápida de resolver su problema"]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(10) }}></Button>
                 </div>
             </>
         case 10:
@@ -153,7 +153,7 @@ export function Page() {
                     <h1>¿Qué valoras más en una amistad?</h1>
                     <Progress actualPage="10" totalPages="10"></Progress>
                     <ResponseOptions type="text" quant={["Iría a ayudarlo, nada es más importante que estar ahí para un amigo", "Le ofrecería un hombro en el que apoyarse y palabras de consuelo", "Buscaría la forma más práctica y rápida de resolver su problema"]}></ResponseOptions>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(11) }}></Button>
                 </div>
             </>
         case 11:
@@ -197,7 +197,7 @@ export function Page() {
                 <div className='page' id='resultado'>
                     <h1>!¿Y tu eres?¡...</h1>
                     <ResultCard image={pinkiePie} title="Pinkie Pie" desc="¡Eres Pinkie Pie! Eres la vida de la fiesta y siempre sabes cómo hacer que todos sonrían. Con tu energía contagiosa y tu amor por la diversión, traes alegría a cualquier lugar al que vas. Eres espontánea, optimista y siempre ves el lado positivo de las cosas. Aunque a veces puedes ser un poco impredecible, tu corazón está en el lugar correcto, y siempre haces lo posible para asegurarte de que tus amigos sean felices. Tu espíritu libre y alegre hace que la vida sea una celebración constante."></ResultCard>
-                    <Button text="Siguiente Pregunta"></Button>
+                    <Button text="Siguiente Pregunta" action={() => { setPage(0) }}></Button>
                 </div>
             </>
         default:
