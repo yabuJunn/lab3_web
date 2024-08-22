@@ -51,7 +51,20 @@ import pinkiePie from '../../assets/PinkiePie.jpg'
 export function Page() {
     const [page, setPage] = useState(0)
 
-    const [respuestas, setRespuestas] = useState(["", "", "", "", "", "", "", "", "", ""])
+    const [respuestas, setRespuestas] = useState({
+        pregunta1: "",
+        pregunta2: "",
+        pregunta3: "",
+        pregunta4: "",
+        pregunta5: "",
+        pregunta6: "",
+        pregunta7: "",
+        pregunta8: "",
+        pregunta9: "",
+        pregunta10: ""
+    })
+
+    console.log(respuestas)
 
     switch (page) {
         case 0:
@@ -71,7 +84,7 @@ export function Page() {
                 <div className='page' id='pregunta1'>
                     <h1>¿Cómo prefieres pasar un día libre?</h1>
                     <Progress actualPage="1" totalPages="10"></Progress>
-                    <ResponseOptions type="text" numQ={1} actionRes={respuestas} quant={["Organizando una fiesta para mis amigos", "Perfeccionando un nuevo proyecto creativo", "Leyendo un buen libro en un lugar tranquilo", "Explorando al aire libre, disfrutando de la naturaleza"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={1} setRespuestas={setRespuestas} respuestas={respuestas} quant={["Organizando una fiesta para mis amigos", "Perfeccionando un nuevo proyecto creativo", "Leyendo un buen libro en un lugar tranquilo", "Explorando al aire libre, disfrutando de la naturaleza"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(2) }}></Button>
                 </div>
             </>
@@ -80,7 +93,7 @@ export function Page() {
                 <div className='page' id='pregunta2'>
                     <h1>¿Cuál de estas imágenes te hace sentir más en paz?</h1>
                     <Progress actualPage="2" totalPages="10"></Progress>
-                    <ResponseOptions type="image" quant={[a2, b2, c2, d2]}></ResponseOptions>
+                    <ResponseOptions type="image" numQ={2} setRespuestas={setRespuestas} quant={[a2, b2, c2, d2]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(3) }}></Button>
                 </div>
             </>
@@ -89,7 +102,7 @@ export function Page() {
                 <div className='page' id='pregunta3'>
                     <h1>¿Cómo te enfrentas a un desafío difícil?</h1>
                     <Progress actualPage="3" totalPages="10"></Progress>
-                    <ResponseOptions type="text" quant={["Con lógica y un plan bien pensado", "Con valentía y determinación", "Pidiendo ayuda a mis amigos, porque juntos somos más fuertes"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={3} setRespuestas={setRespuestas} quant={["Con lógica y un plan bien pensado", "Con valentía y determinación", "Pidiendo ayuda a mis amigos, porque juntos somos más fuertes"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(4) }}></Button>
                 </div>
             </>
@@ -98,7 +111,7 @@ export function Page() {
                 <div className='page' id='pregunta4'>
                     <h1>¿Cuál es tu forma favorita de expresarte?</h1>
                     <Progress actualPage="4" totalPages="10"></Progress>
-                    <ResponseOptions type="text" quant={["A través de la moda y el diseño", "Organizando eventos divertidos y memorables", "Cuidando de otros, mostrando compasión y amabilidad"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={4} setRespuestas={setRespuestas} quant={["A través de la moda y el diseño", "Organizando eventos divertidos y memorables", "Cuidando de otros, mostrando compasión y amabilidad"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(5) }}></Button>
                 </div>
             </>
@@ -107,7 +120,7 @@ export function Page() {
                 <div className='page' id='pregunta5'>
                     <h1>Elige la imagen que mejor representa tu estilo ideal</h1>
                     <Progress actualPage="5" totalPages="10"></Progress>
-                    <ResponseOptions type="image" quant={[a2, b2, c2, d2]}></ResponseOptions>
+                    <ResponseOptions type="image" numQ={5} setRespuestas={setRespuestas} quant={[a5, b5, c5, d5]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(6) }}></Button>
                 </div>
             </>
@@ -116,7 +129,7 @@ export function Page() {
                 <div className='page' id='pregunta6'>
                     <h1>¿Cómo manejas el estrés?</h1>
                     <Progress actualPage="6" totalPages="10"></Progress>
-                    <ResponseOptions type="text" quant={["Me organizo y hago una lista de tareas para mantener el control", "Me distraigo con una actividad divertida o creativa", "Me tomo un tiempo para relajarme en la naturaleza"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={6} setRespuestas={setRespuestas} quant={["Me organizo y hago una lista de tareas para mantener el control", "Me distraigo con una actividad divertida o creativa", "Me tomo un tiempo para relajarme en la naturaleza"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(7) }}></Button>
                 </div>
             </>
@@ -125,7 +138,7 @@ export function Page() {
                 <div className='page' id='pregunta7'>
                     <h1>¿Cuál de estas imágenes te inspira más?</h1>
                     <Progress actualPage="7" totalPages="10"></Progress>
-                    <ResponseOptions type="image" quant={[a7, b7, c7, d7]}></ResponseOptions>
+                    <ResponseOptions type="image" numQ={7} setRespuestas={setRespuestas} quant={[a7, b7, c7, d7]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(8) }}></Button>
                 </div>
             </>
@@ -134,7 +147,7 @@ export function Page() {
                 <div className='page' id='pregunta8'>
                     <h1>Elige la imagen que te haga sonreír</h1>
                     <Progress actualPage="8" totalPages="10"></Progress>
-                    <ResponseOptions type="image" quant={[a8, b8, c8, d8]}></ResponseOptions>
+                    <ResponseOptions type="image" numQ={8} setRespuestas={setRespuestas} quant={[a8, b8, c8, d8]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(9) }}></Button>
                 </div>
             </>
@@ -143,7 +156,7 @@ export function Page() {
                 <div className='page' id='pregunta9'>
                     <h1>¿Qué harías si un amigo necesita ayuda urgente?</h1>
                     <Progress actualPage="9" totalPages="10"></Progress>
-                    <ResponseOptions type="text" quant={["Iría a ayudarlo, nada es más importante que estar ahí para un amigo", "Le ofrecería un hombro en el que apoyarse y palabras de consuelo", "Buscaría la forma más práctica y rápida de resolver su problema"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={9} setRespuestas={setRespuestas} quant={["Iría a ayudarlo, nada es más importante que estar ahí para un amigo", "Le ofrecería un hombro en el que apoyarse y palabras de consuelo", "Buscaría la forma más práctica y rápida de resolver su problema"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(10) }}></Button>
                 </div>
             </>
@@ -152,7 +165,7 @@ export function Page() {
                 <div className='page' id='pregunta10'>
                     <h1>¿Qué valoras más en una amistad?</h1>
                     <Progress actualPage="10" totalPages="10"></Progress>
-                    <ResponseOptions type="text" quant={["Iría a ayudarlo, nada es más importante que estar ahí para un amigo", "Le ofrecería un hombro en el que apoyarse y palabras de consuelo", "Buscaría la forma más práctica y rápida de resolver su problema"]}></ResponseOptions>
+                    <ResponseOptions type="text" numQ={10} setRespuestas={setRespuestas} quant={["Iría a ayudarlo, nada es más importante que estar ahí para un amigo", "Le ofrecería un hombro en el que apoyarse y palabras de consuelo", "Buscaría la forma más práctica y rápida de resolver su problema"]}></ResponseOptions>
                     <Button text="Siguiente Pregunta" action={() => { setPage(11) }}></Button>
                 </div>
             </>
