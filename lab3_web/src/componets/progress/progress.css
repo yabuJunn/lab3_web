@@ -1,0 +1,27 @@
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    #progressContainer {
+        width: 93px;
+        height: 93px;
+        border-radius: 100%;
+        background-color: #52CCD6;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #progressContainer h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 34px;
+        font-weight: lighter;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 435px) {
+    #progressContainer {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+    }
+}
